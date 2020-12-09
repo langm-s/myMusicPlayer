@@ -1,0 +1,184 @@
+#app-music {
+  width: 1200px;
+  height: 700px;
+  margin: 80px auto ;
+  background-color: #222;
+}
+#app-music .box-top {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#app-music .box-top .top-title {
+  color: #fff;
+  font-size: 20px;
+}
+#app-music .box-top .top-search {
+  position: relative;
+}
+#app-music .box-top .top-search input {
+  width: 280px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  padding-left: 1rem;
+}
+#app-music .box-top .top-search .search {
+  cursor: pointer;
+  position: absolute;
+  right: 6px;
+  top: 2px;
+}
+#app-music .box-content {
+  display: flex;
+  height: 560px;
+}
+#app-music .box-content .content-left {
+  width: 200px;
+  height: 100%;
+  overflow-y: scroll;
+}
+#app-music .box-content .content-left .music-list .music-list-item {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #fff;
+}
+#app-music .box-content .content-left .music-list .music-list-item .item-audio {
+  cursor: pointer;
+}
+#app-music .box-content .content-left .music-list .music-list-item .songname {
+  width: 100px;
+  height: 100%;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: center;
+}
+#app-music .box-content .content-left .music-list .music-list-item .mvbtn {
+  cursor: pointer;
+}
+#app-music .box-content .content-left .music-list .music-list-item .hidden {
+  visibility: hidden;
+}
+#app-music .box-content .content-left .music-list .music-list-item:nth-child(2n-1) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#app-music .box-content .content-middle {
+  width: 750px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  position: relative;
+}
+#app-music .box-content .content-middle .playing {
+  transform: rotate(0) !important;
+}
+#app-music .box-content .content-middle .player-bar {
+  left: 200px;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-25deg);
+  transform-origin: 12px 12px;
+  transition: all 2s;
+}
+#app-music .box-content .content-middle .cover {
+  top: 156px;
+  left: 156px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+#app-music .box-content .content-middle .autorotate {
+  animation-name: running;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#app-music .box-content .content-middle .disc {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+#app-music .box-content .content-right {
+  width: 250px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  color: #fff;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item {
+  padding: 5px;
+  display: flex;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item .item-left {
+  padding: 5px;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item .item-left img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item .item-right .nickname {
+  font-size: 16px;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item .item-right .content {
+  font-size: 12px;
+  color: white;
+}
+#app-music .box-content .content-right .comments-list .comments-list-item:nth-child(2n-1) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#app-music .box-bottom {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#app-music .box-bottom audio {
+  width: 100%;
+}
+#app-music .box-bottom .video-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+#app-music .box-bottom .video-box .video-close {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 50px;
+  z-index: 99;
+}
+#app-music .box-bottom .video-box .video-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#app-music .box-bottom .video-box video {
+  position: fixed;
+  width: 1200px;
+  height: 700px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+#app-music .box-bottom .hidden {
+  display: none;
+}
